@@ -1,0 +1,883 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: 'inder';
+    src: local('inder'), local('inder-regular'),
+        url('../fonts/inder-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/inder-regular.woff2') format('woff2'),
+        url('../fonts/inder-regular.woff') format('woff'),
+        url('../fonts/inder-regular.ttf') format('truetype'),
+        url('../fonts/inder-regular.svg#Inder-Regular') format('svg');
+}
+/***Fix for weird Firefox bug***HTML and TTF have to be in the same folder*/
+@font-face {
+    font-family: 'inder_ff';
+    src:  url('../en/inder-regular.ttf') format('truetype'),
+	      url('../de/inder-regular.ttf') format('truetype'),
+	      url('../sp/inder-regular.ttf') format('truetype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+body {
+  font:16px inder, inder_ff, Arial, sans-serif;
+	color: #26a5b9;
+}
+.wrapper {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url(../img/waterbackground.png);
+	opacity:0.2;
+}
+.content{
+	margin: 0 auto;
+	width:95%;
+}
+.full-height{
+	height: 100vh;
+}
+/*************Text************/
+h1, h2,h3 {
+	padding:5% 5% 2% 5%;
+	text-shadow: 1px 1px 1px gray;	
+}
+h1{
+	font-size:2rem;
+}
+h2{
+	font-size:1.5rem;
+}
+h3{
+	font-size:1rem;
+}
+h4{
+	font-size:0.9rem;
+		padding:5% 5% 2% 5%;
+}
+p{
+	font-size:1.1rem;
+	margin-left: 2%;
+	padding: 2%;
+}
+/******************nagivation Small**********************/
+
+
+#topmenu, #bottom-menu {
+	position: fixed;
+	top: 0;
+	left: -250px;
+	width: 250px;
+	transition: all 1s;
+	z-index:1999;
+	height: 70px;
+}
+
+#topmenu h2 a, #bottom-menu h2 a {
+	display: block;
+	position: absolute;
+	top:0;
+	right: -40px;
+	width: 40px;
+	padding-left: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+#topmenu h2 a{
+	background-color:#6785b4;
+}
+#bottom-menu h2 a {
+	background-color:#333;
+}
+#topmenu ul, #bottom-menu ul{
+		list-style:none;
+		z-index:1999;
+}
+#topmenu ul{
+		background-color:#6785b4;
+}
+#topmenu > ul, #bottom-menu > ul{
+	height:100vh;
+}
+#bottom-menu  ul{
+  background-color: #333;
+  width:100%
+}
+#topmenu > ul, #bottom-menu > ul {
+	position: absolute;
+	top: 0px;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+#topmenu > ul > li, #bottom-menu > ul > li {
+	position: relative;
+	display: block;
+	width: 250px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#topmenu > ul > li > ul, #bottom-menu > ul > li > ul {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: none;
+	opacity:0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+ul a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+#topmenu ul li:hover, #topmenu ul li:active {
+	background-color: #26a5b9;
+	-webkit-user-select:none;		/*for Apple devices*/
+	-webkit-touch-callout: none;	/*for Apple devices*/	
+}
+#bottom-menu ul li:hover, #bottom-menu ul li:active {
+	background-color: #666;
+	-webkit-user-select:none;		/*for Apple devices*/
+	-webkit-touch-callout: none;	/*for Apple devices*/		
+}
+#topmenu ul li:hover ul, #bottom-menu ul li:hover ul,#topmenu ul li:active ul, #bottom-menu ul li:active ul {
+	display: block;
+	padding-left:20px;
+	opacity:0.95;
+	-webkit-user-select:none;		/*for Apple devices*/
+	-webkit-touch-callout: none;	/*for Apple devices*/		
+}
+#topmenu > ul > li:active > ul, #bottom-menu > ul > li:active > ul {
+	display: block;
+}
+#topmenu:target, #bottom-menu:target {
+	left:0;
+	opacity:0.95;
+}
+#topmenu h2 a[href="#close"], #topmenu:target h2 a[href="#topmenu"] ,
+ #bottom-menu h2 a[href="#close"], #bottom-menu:target h2 a[href="#topmenu"] 
+{
+	display:none;
+}
+#topmenu:target h2 a[href="#close"] , #bottom-menu:target h2 a[href="#close"]{
+	display:block;
+	opacity:0.95;
+}
+
+#bottom-menu h2 a:hover, #bottom-menu h2 a:active {
+	background-color:#666;
+	-webkit-user-select:none;		/*for Apple devices*/
+	-webkit-touch-callout: none;	/*for Apple devices*/	
+}
+
+/********************FLags**********************************/
+.flags{
+	position: absolute;
+	top:10px;
+	right:10px;
+	z-index:9999;
+	width:100px;
+}
+.flag{
+	height: 17px;
+	width: 23px;
+}
+.not-active{
+  pointer-events: none;
+  cursor: default;
+   -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+
+
+/********************Index Page*********************************/
+.fullBackground {
+  background-position: center center;
+  background-size:cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+}
+
+.pattern { 
+	width:100%;
+	
+	height:98vh;
+	content: '';
+     background: transparent url(../img/pattern.png) repeat top left;
+}
+.caption {
+  font-size: 3rem;
+  text-align:left;
+  text-shadow: 2px 2px 2px #333;
+  color: #f1f1f1;
+  position: absolute;
+  top: 60%;
+  right:0
+  }
+
+.caption ~ h5{
+  font-size: 1.3rem;
+  text-align:left;
+  text-shadow: 2px 2px 2px #333;
+  color: #f1f1f1;
+  position: absolute;
+  top: 20%;
+  right: 3%;	
+	
+}
+/*****************Back-top************/
+
+#back-top {
+	position: fixed;
+	bottom: 5rem;
+	right: 0.5rem;
+	display: none;
+	z-index: 9999;
+	}
+#back-top a {
+	text-decoration: none;
+	color: #f1f1f1;
+	background-color:#6785b4;
+	opacity: 0.9;
+	font-size: 2rem;
+	padding: 0 15px 10px;
+	display: block;
+}
+
+/*Footer*/
+footer{
+	text-align:right;
+	background: #6785b4;
+	color:#c8baa0;
+	padding: 5px 10%;
+	font-size: 1.1rem;
+	position:fixed;
+	bottom:0;
+	left:0;
+	width:100%;
+	z-index:9999;
+}
+
+footer a{
+	text-decoration:none;
+    color:#c8baa0;
+}
+
+footer a:hover{
+	font-weight: bolder;
+	color: #f1f1f1
+}
+/*******************Education********/
+.card.try {
+  background: url(../img/training_dsd.jpg) no-repeat center center;
+  display:block;
+  }
+
+.card.cert {
+  background: url(../img/Training_2014-04-11_IMG_0645.jpg) no-repeat center center;
+  display:block;
+ }
+
+.card.continue {
+ background: url(../img/Training_continue.jpg) no-repeat center center;
+ display:block;
+}
+
+#try img, #cert img, #continue img{
+	float:left;
+	margin-right: 3%;
+	margin-bottom: 3%;
+	border-radius: 10px;
+	height: 45vw;
+    -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.download{
+	display:inline-block;
+	width:100%;
+	text-align:right;
+	padding-right:5%;
+}
+.download a{
+	text-decoration:none;
+	color: #26a5b9;
+	font-size: 1rem;
+}
+
+/*******Destination Cards*************/
+#selectFilter{
+	margin:2%;
+	color: #26a5b9;
+	padding: 1% 3%;
+	background-color: transparent;
+	}
+.card-group{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+min-height:95vh;
+}
+.card a{
+	text-decoration:none;
+}
+.card {
+   height: 350px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  display:none;
+  position:relative;
+  z-index: 1;
+}
+.card.komodo {
+  background: url(../img/destination_Padar-Island.jpg) no-repeat center center;
+}
+.card.lembongan {
+  background: url(../img/destination_Lembongan.jpg) no-repeat center center;
+}
+.card.sipadan {
+  background: url(../img/destination_Sipadan.jpg) no-repeat center center;
+}
+.card.malapascua {
+  background: url(../img/destination_Malapascua.jpg) no-repeat center center;
+}
+.card.kohphihi {
+  background: url(../img/destination_KohPhiPhi.jpg) no-repeat center center;
+}
+.card.apo {
+  background: url(../img/destination_APO.jpg) no-repeat center center;
+}
+.card.grancanaria {
+  background: url(../img/destination_GRanCanaria.jpg) no-repeat center center;
+}
+.card.bali {
+  background: url(../img/destination_bali.jpg) no-repeat center center;
+}
+.card.tenggol {
+  background: url(../img/destination_tenggol.jpg) no-repeat center center;
+}
+.card.egypt {
+  background: url(../img/destination_egypt.jpg) no-repeat center center;
+}
+
+.card:hover .card-info {
+  opacity:1;
+  position:relative;
+  bottom: -30px;
+}
+.title-content {
+  text-align: center;
+  margin: 5% 0 0 0;
+  z-index: 20;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position:relative;
+}
+.title-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f1f1f1;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+hr {
+  width: 50px;
+  height: 3px;
+  margin: 7% auto;
+  border: 0;
+  background: #c8baa0;
+}
+.intro {
+  margin: 0 auto;
+  color: #f1f1f1;;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 18px;
+}
+.card-info {
+  width: 100%;
+  position: relative;
+  bottom: -120px;
+  left: 0;
+  margin: 0 auto;
+  padding: 0 10px;
+  color: #f1f1f1;;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  line-height: 16px;
+  z-index: 20;
+  opacity: 0;
+  font-size:0.8rem;
+  -webkit-transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  -o-transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+  transition: bottom 0.3s, opacity 0.3s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+.card-blur{
+	width:100%;
+	height:100%;
+    z-index:15;
+	position: absolute;
+	opacity:0;
+	border-radius: 10px;	
+	background:rgba(0,0,0,0.5);
+	transition: all 0.3s ease-in-out;
+}
+
+.card:hover .card-blur{
+	opacity:1;
+
+}
+#overview{
+	display:none;
+}
+/************************MARINE LIFE*********************/
+
+#sec-coral, #sec-nudi, #sec-fish, #sec-inver{
+	padding-top:70px;
+}
+#sec-inver{
+	padding-bottom:100px;
+}
+#coral, #nudi, #inver, #fish{
+	display:block;
+}
+label h2{
+	border: 1px solid #a9cecf;
+	border-radius: 10px;
+    -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+#checkcoral:hover label,
+#checkfish:hover label, 
+#checkinver:hover label,
+ #checknudi:hover label{
+	cursor:pointer;
+}
+
+#checkcoral:checked ~ #coral, 
+#checkfish:checked ~ #fish, 
+#checkinver:checked ~ #inver, 
+#checknudi:checked ~ #nudi{
+	display: none;
+}
+.ghost{
+	display:none;
+}
+
+.youtube-link{
+	text-decoration: none;
+	font-weight: bold;
+	color: #6785b4;
+}
+/*********Lightbox Gallery**********************/
+.lightboxOverlay {
+	background-color: #f1f1f1;
+}
+.gallery img {
+	height: 200px;
+	border: 1px solid #aaa;
+	padding: 2px;
+	border-radius:4%;
+	opacity: 0.8;
+}
+.gallery img:hover {
+	opacity: 1;
+}
+.lb-outerContainer {
+	background-color: black;
+}
+/*************about*********/
+#bio img{
+    width:60%;
+	margin-left:20%;
+	border-radius: 50%;
+    -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.mySlides{
+	margin: 0 auto;
+	margin-bottom: 150px;
+	height: 25vh;
+	border-radius: 10%;
+	-webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+	        box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.references{
+	height: 18vh;
+}
+.myRefs{
+	margin: 0 auto;
+}
+/********************************Form************************************/
+#contact {
+	background: #f1f1f1;
+	padding: 0 25px 0;
+	margin: 0;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	  font-family:inder, Arial, sans-serif;
+	width: 100%;
+	border: 1px solid #CCC;
+	background: #FFF;
+	margin: 2px 0 5px;
+	padding: 10px;
+}
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition: border-color 0.3s ease-in-out;
+	-o-transition: border-color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+	border: 1px solid #AAA;
+}
+#contact textarea {
+	height: 100px;
+	max-width: 100%;
+	resize: none;
+}
+#contact button[type="submit"] {
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	background: #26a5b9;
+	color: #FFF;
+	margin: 0 0 5px;
+	padding: 10px;
+	font-size: 15px;
+}
+#contact button[type="submit"]:hover {
+	background: #a9cecf;
+	-webkit-transition: background 0.3s ease-in-out;
+	-webkit-transition: background-color 0.3s ease-in-out;
+	-o-transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
+}
+#contact button[type="submit"]:active {
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+	        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+#contact input:focus, #contact textarea:focus {
+	outline: 0;
+	border: 1px solid #999;
+}
+/*****************Clearfix***************/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*smartphones, Android phones, landscape iPhone ************************************************//* smartphones, Android phones, landscape iPhone ************************************************//* smartphones, Android phones, landscape iPhone ************************************************//* smartphones, Android phones, landscape iPhone ************************************************/
+
+@media (min-width:480px) {
+
+.content {
+	width: 90%;
+}
+.card-info {
+  font-size:1rem;
+  padding:0 30px;
+}
+#back-top {
+	bottom: 4rem;
+}
+.references{
+	height: 28vh;
+}
+
+/****Education PIctures*****************/
+#try img, #cert img, #continue img{
+	height: 40vw;
+}
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops******************************** *//* tablet, landscape iPad, lo-res laptops ands desktops******************************** */
+/* tablet, landscape iPad, lo-res laptops ands desktops ********************************/
+/* tablet, landscape iPad, lo-res laptops ands desktops **********************************/
+@media (min-width:801px) { 
+.content {
+	margin: 60px auto;
+	width:85%;
+}
+/*************Text************/
+h1{
+	font-size:2.5rem;
+}
+h2{
+	font-size:2rem;
+}
+h3{
+	font-size:1.3rem;
+}
+h4{
+	font-size:1rem;
+}
+
+
+/******************Navigation big************/
+#topmenu h2 a, #bottom-menu h2 a{
+	display: none;
+}
+ul a {
+	font-size: 1em;
+}
+#topmenu , #bottom-menu{
+	width:100%;
+	
+}
+
+#topmenu ul{
+	height:auto;
+}
+#topmenu > ul {
+	position:fixed;
+	top:0;
+	left:0;
+	padding-left: 10%;
+	height:60px;
+	width:100%;
+}
+#bottom-menu > ul{
+	position:fixed;
+	left:0;
+	top: auto;
+	bottom: 50px;
+	padding-left: 10%;
+	height:60px;
+	width:100%;
+	
+}
+
+nav ul {
+	width:100%;
+	display: -webkit-box;
+	display:-webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+		opacity: 0.95;
+}
+#topmenu > ul > li > ul {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	display: none;
+}
+
+#bottom-menu > ul > li > ul {
+	position: absolute;
+	top:auto;
+	bottom: 58px;
+	left: 0;
+	display: none;
+}
+
+nav ul li:hover ul {
+	display: block;
+}
+
+/********************FLags**********************************/
+.flags{
+	position:fixed;
+	top: 20px;
+	left:10px;
+}
+
+
+/*back-top*/
+#back-top {
+	right: 1.5rem;
+	}
+
+/*****************************back-top***************************/
+#back-top {
+	bottom: 3rem;
+}
+/*******************Education********/
+#try,#cert,#continue{
+	padding-top: 60px;
+}
+.download a{
+	font-size: 2rem;
+}
+
+/****Education PIctures*****************/
+#try img, #cert img, #continue img{
+	height: 30vw;
+}
+/*******Destination Cards*************/
+.card {
+  -ms-flex-preferred-size: 46%;
+      flex-basis: 46%;
+}
+
+ .title-content {
+   margin: 40px 0 0 0;
+ }
+ .title-content h3 {
+  font-size: 1.2rem;
+ }
+  .card-info {
+	   padding: 0 20px;
+	   line-height: 18px;
+	   font-size: 0.9rem;
+}
+#overview{
+	display:block;
+	width:100%;
+	text-align:center;
+	margin: 5%;
+}
+
+/**************Life********************/
+label h2{
+	padding-top: 3%;
+}
+ /**************Two columns in about*********/
+aside#bio{
+	float: left;
+	width: 30%;
+	text-align:left;
+}
+
+aside#bio ~ main{
+	float:left;
+	margin-left:5%;
+	width: 65%;
+}
+
+ }
+/* big landscape tablets, laptops, and desktops *******************************************************/
+/* big landscape tablets, laptops, and desktops *******************************************************/
+/* big landscape tablets, laptops, and desktops *******************************************************/
+/* big landscape tablets, laptops, and desktops *******************************************************/
+/* big landscape tablets, laptops, and desktops *******************************************************/
+@media (min-width:1025px) { 
+.content {
+	margin: 60px auto;
+	width:80%;
+}
+/*************Text************/
+h1{
+	font-size:4rem;
+}
+h2{
+	font-size:3rem;
+}
+h3{
+	font-size:2rem;
+}
+h4{
+	font-size:1rem;
+}
+p{
+	line-height:24px;
+}
+/************Navigation*******************/
+ul a {
+	font-size: 1.5em;
+}
+#topmenu > ul {
+	height:68px;
+}
+#topmenu > h2 {
+	padding:0;
+}
+
+#topmenu > ul > li > ul {
+	top: 68px;
+
+}
+
+/********************FLags**********************************/
+.flags{
+	top: 25px;
+	left:20px;
+}
+
+/****Education PIctures*****************/
+#try img, #cert img, #continue img{
+	height: 25vw;
+}
+/*************Cards********************/
+#selectFilter{
+	font-size: 1.2rem;
+	padding: 1%;
+}
+
+.card {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+ .title-content {
+   margin: 55px 0 0 0;
+ }
+ .title-content h3 {
+  font-size: 1.5rem;
+ }
+  .card-info {
+	   padding: 0 40px;
+	   line-height: 24px;
+	   font-size: 1rem;
+}
+ /**************Two columns in about*********/
+aside#bio{
+	float: left;
+	width: 30%;
+}
+
+aside#bio ~ main{
+	float:left;
+	margin-left:10%;
+	width: 60%;
+}
+  .references{
+	height: 35vh;
+}
+
+/*************Life********************/
+label h2{
+	padding-top: 1.6%;
+	font-size: 2.5rem;
+}
+}
+

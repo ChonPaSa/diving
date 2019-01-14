@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!--Metatags SEO-->
+<meta name="description" content="Learn to dive today with me. Courses from beginners to advance. Try my favourite dive sites and learn about marine life" />
+<meta name="keywords" content="Scuba diving, Marine life, dive Asia, dive Philippines, dive Thailand, dive Indonesia, dive Malaysia, Try diving, PADI" />
+<meta name="author" content="Ascension Pardo">
+<meta name="robots" content="index,follow">
+<title>Diving Instructor Choni</title>
+
+
+<!--FAVICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	
+<!--IE compatibility-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+  <![endif]-->
+ 
+  <!--Viewport and Apple touch-->
+<meta name = "viewport" content = "width = device-width, initial-scale=1">
+<script>document.addEventListener("touchstart", function(){}, true);</script>
+  
+ <!-- Scripts and css-->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/lightbox.js"></script>
+<script src="../js/grt-youtube-popup.js"></script>
+<link href="../css/lightbox.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/grt-youtube-popup.css">
+<link href="../css/mainstyle.css" rel="stylesheet" type="text/css">
+<script>
+	//Youtube PopUp
+		$(document).ready(function(){
+		$(".youtube-link").click(function(){
+	      $(".youtube-link").grtyoutube({ autoPlay:false });
+			return false;
+		});
+	});
+	
+	//scroll
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(window).scrollTop()>200){	
+				$("#back-top").fadeIn();	
+			}
+			else{	
+				$("#back-top").fadeOut();		
+			};
+		});
+		
+		//slow scroll up
+		$("#back-top a").click(function(){
+			$("html,body").animate({scrollTop:0},1000);
+			return false;
+			
+		});
+	});
+</script>
+</head>
+
+<body>
+<div class="wrapper"></div>
+<nav id="topmenu">
+  <h2><a href="#topmenu">&equiv;</a></h2>
+  <h2><a href="#close">&times;</a></h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="education.html">Education</a>
+      <ul>
+        <li><a href="education.html#try">Try Diving</a></li>
+        <li><a href="education.html#cert">Get Certified</a></li>
+        <li><a href="education.html#continue">Continue your education</a></li>
+      </ul>
+    </li>
+    <li><a href="destinations.html?location=everything">Destinations</a>
+      <ul>
+        <li><a href="destinations.html?location=indonesia">Indonesia</a></li>
+        <li><a href="destinations.html?location=thailand">Thailand</a></li>
+        <li><a href="destinations.html?location=malaysia">Malaysia</a></li>
+        <li><a href="destinations.html?location=philippines">Philippines</a></li>
+        <li><a href="destinations.html?location=other">Other Destinations</a></li>
+      </ul>
+    </li>
+    <li><a href="life.html">Marine Life</a>
+      <ul>
+        <li><a href="life.html#sec-coral">Coral</a></li>
+        <li><a href="life.html#sec-nudi">Nudibranches</a></li>
+        <li><a href="life.html#sec-inver">Invertebrates</a></li>
+        <li><a href="life.html#sec-fish">Fish &amp; Co.</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">About me</a>
+    </li>
+  </ul>
+</nav>
+	<div class="flags">
+	  <a href="../en/life.html" class="not-active"><img class="flag" src="../img/gb.png"  alt="English"></a>
+		<a href="../sp/life.html"><img class="flag" src="../img/es.png"  alt="Spanish"></a>
+		<a href="../de/life.html"><img class="flag" src="../img/de.png"  alt="German"></a>
+	</div>
+<div class="content">
+<header>
+  <div>
+    <h1>Marine Life</h1>
+  </div>
+</header>
+<main>
+<section id="sec-nudi">
+	<input type="checkbox" id="checknudi" class="ghost">
+	<label for="checknudi">	
+    <h2>Nudibranches</h2>
+	</label>
+	<div id="nudi">
+		<p>This colorful critters are as beatiful as they are dangerous. Learn about the fascinating predatory and reproductory behaviour of these little sea slug in <a href="#" class="youtube-link" youtubeid="wgEWN_Nt8v4">this video</a>.</p>
+		<div>
+		  <figure class="gallery"> 
+			<script>
+			var fotoArray = new Array('life_nudi2.jpg','life_nembrota.jpg','life_nudi_blackwhite.jpg','life_nudi_cream.jpg','life_nudi_eggs.jpg','life_nudi_egipt.jpg');
+
+			for( i = 0 ; i < fotoArray.length ; i++){
+				document.write('<a href="../img/' + fotoArray[i] + '" data-lightbox="image-nudi" data-title="Nudibranches"><img src="../img/'+ fotoArray[i]+'" alt="Nudibranches"></a>')
+			};
+			</script> 
+		  </figure>
+		</div>
+	</div>
+</section>
+<section id="sec-fish">
+	<input type="checkbox" id="checkfish" class="ghost">
+	<label for="checkfish">	
+    <h2>Fish & Co.</h2>
+	</label>
+	<div id="fish">
+		<p>When we think about fish the first thing that comes on mind are the colorful fish that inhabitate the tropical coral reef but the variety of species is almost countless. The underwater encounters with some of the less known species are what moves some of the most experienced divers to go underwater. Watch some true facts about the fascinating frog fish in <a href="#" class="youtube-link" youtubeid="uRP4nAGMYCY">this video</a>.</p>
+		<div>
+		  <figure class="gallery"> 
+			<script>
+			var fotoArray = new Array('life_spottedray.jpg','life_stonefish.jpg','life_frogfish_forntal.jpg','life_moray.jpg','life_frogfishwhite.jpg','life_turtle_alone.jpg','life_frogfish_green.jpg','life_manta.jpg','life_shark.jpg','life_fish_lion.jpg');
+			for( i = 0 ; i < fotoArray.length ; i++){
+				document.write('<a href="../img/' + fotoArray[i] + '" data-lightbox="image-fish" data-title="Fish"><img src="../img/'+ fotoArray[i]+'" alt="Fishes"></a>')
+			}
+			</script> 
+		  </figure>
+		</div>
+	</div>
+</section>
+<section id="sec-coral">
+	<input type="checkbox" id="checkcoral" class="ghost">
+	<label for="checkcoral">	
+    <h2>Coral</h2>
+	</label>
+	<div id="coral">
+		<p>Corals, are they plants? animals? learn about this amazing creatures in <a href="#" class="youtube-link" youtubeid="Cusz66JZXkA">this video</a>.</p>
+		<div>
+		  <figure class="gallery"> 
+			<script>
+			var fotoArray = new Array('coral_IMG_0392.jpg','coral_IMG_1344.jpg','coral_IMG_1351.jpg','coral_IMG_1367.jpg','coral_Egipto.jpg','life_Coral_soft.jpg');
+			for( i = 0 ; i < fotoArray.length ; i++){
+				document.write('<a href="../img/' + fotoArray[i] + '" data-lightbox="image-coral" data-title="Coral"><img src="../img/'+ fotoArray[i]+'" alt="Coral"></a>')
+			}
+			</script> 
+		  </figure>
+		</div>
+	</div>
+</section>
+<section id="sec-inver">
+	<input type="checkbox" id="checkinver" class="ghost">
+	<label for="checkinver">	
+    <h2>Invertebrades</h2>
+	</label>
+	<div id="inver">
+		<p>The earliest animals were marine invertebrates, that is, vertebrates came later. From sea stars to shrimps these animals vary from family to family in their physiology and behaviour. Find some examples in <a href="#" class="youtube-link" youtubeid="arXgQxlc56I">this video</a>.</p>
+		<div>
+		  <figure class="gallery"> 
+			<script>
+			var fotoArray = new Array('life_cowrey.jpg','life_cucumber.jpg','life_featherstar.jpg','life_Thornes.jpg','life_inver_red.jpg');
+			for( i = 0 ; i < fotoArray.length ; i++){
+				document.write('<a href="../img/' + fotoArray[i] + '" data-lightbox="image-inver" data-title="Invertebrades"><img src="../img/'+ fotoArray[i]+'" alt="Invertevrades"></a>')
+			}
+			</script> 
+		  </figure>
+		</div>
+	</div>
+</section>
+</main>
+<footer>&copy; 2018 Ascension Pardo | All rights reserved |
+<a href="../datenschutzerklaerung.pdf">Data Protection</a> | 
+<a href="../impressum.pdf">Imprint</a>
+</footer>
+	</div>
+<div id="back-top"> <a href="#top">&uarr;</a> </div>
+</body>
+
+</html>

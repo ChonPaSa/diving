@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!--Metatags SEO-->
+<meta name="description" content="Tauchen lernen. Kurse für Anfänger und forgeschrittene. Entdeck meine favorite Tauchziele und lern über Meerestiere" />
+<meta name="keywords" content="Tauchen lernen, Meerestiere, Tauchen in Asien, Tauchen auf Philippinen, Tauchen in Thailand, Tauchen in Indonesien, Tauchen Malaysia, Schnuppertauchen, PADI" />
+<meta name="author" content="Ascension Pardo">
+<meta name="robots" content="index,follow">
+<title>Tauchlehrerin Choni</title>
+
+<!--FAVICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+	
+<!--IE compatibility-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!--Viewport and Apple touch-->
+<meta name = "viewport" content = "width = device-width, initial-scale=1">
+<script>document.addEventListener("touchstart", function(){}, true);</script>
+  
+ <!-- Scripts and css-->  
+<link href="../css/mainstyle.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-3.3.1.min.js"></script>	
+<script>
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+function destinationFilter(selectObject) {
+    var value, cards, intro, dest, i;
+	value = selectObject.value;
+	cards = document.getElementsByClassName("card");
+	if (value == 'everything'){
+		for (i = 0; i < cards.length; i++) {
+			  cards[i].style.display = "block";
+		}
+	}
+	else{
+		for (i = 0; i < cards.length; i++) {
+			  cards[i].style.display = "none";
+			}
+		cards = document.querySelectorAll('.card.'+value);
+		for (i = 0; i < cards.length; i++) {
+			  cards[i].style.display = "block";
+			}
+	}
+};
+
+function landing(){
+	var location="";
+	location = getParameterByName('location');
+	var sel = document.getElementById("selectFilter");
+	sel.value = location;
+	destinationFilter(sel);
+}
+
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(window).scrollTop()>200){	
+				$("#back-top").fadeIn();	
+			}
+			else{	
+				$("#back-top").fadeOut();		
+			};
+		});
+		
+		//slow scroll up
+		$("#back-top a").click(function(){
+			$("html,body").animate({scrollTop:0},1000);
+			return false;
+		});
+	});
+	
+</script>
+</head>
+<body onload="landing();">
+<div class="wrapper"></div>
+<nav id="topmenu">
+  <h2><a href="#topmenu">&equiv;</a></h2>
+  <h2><a href="#close">&times;</a></h2>
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+       <li><a href="education.html">Tauchkurse</a>
+      <ul>
+        <li><a href="education.html#try">Schnupper<wbr>tauchen</a></li>
+        <li><a href="education.html#cert">Tauchschein</a></li>
+        <li><a href="education.html#continue">Weitere Kurse</a></li>
+      </ul>
+    </li>
+    <li><a href="destinations.html?location=everything">Tauchziele</a>
+      <ul>
+        <li><a href="destinations.html?location=indonesia">Indonesien</a></li>
+        <li><a href="destinations.html?location=thailand">Thailand</a></li>
+        <li><a href="destinations.html?location=malaysia">Malaysia</a></li>
+        <li><a href="destinations.html?location=philippines">Philippinen</a></li>
+        <li><a href="destinations.html?location=other">Andere Ziele</a></li>
+      </ul>
+    </li>
+    <li><a href="life.html">Meerestiere</a>
+      <ul>
+        <li><a href="life.html#sec-coral">Korallen</a></li>
+        <li><a href="life.html#sec-nudi">Nacktkiemer</a></li>
+        <li><a href="life.html#sec-inver">Wirbellose</a></li>
+        <li><a href="life.html#sec-fish">Fisch und mehr</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">Über mich</a>
+    </li>
+  </ul>
+</nav>
+	<div class="flags">
+	  <a href="../en/destinations.html?location=everything"><img class="flag" src="../img/gb.png" alt="English"></a>
+		<a href="../sp/destinations.html?location=everything"><img class="flag" src="../img/es.png" alt="Spanish"></a>
+		<a href="../de/destinations.html?location=everything" class="not-active"><img class="flag" src="../img/de.png" alt="German"></a>
+	</div>>
+<div class="content">
+  <header>
+    <div>
+      <h1>Tauchziele</h1>
+    </div>
+  </header>
+  <main>
+<select id="selectFilter" onchange="destinationFilter(this)">
+  <option value="everything">Alle Ziele</option>	
+  <option value="thailand">Thailand</option>
+  <option value="indonesia">Indonesien</option>
+  <option value="malaysia">Malaysia</option>
+  <option value="philippines">Philippinen</option>
+  <option value="other">Weitere Ziele</option>	
+</select>
+    <div class="card-group">
+      <div class="card indonesia komodo">
+		<div class="card-blur"></div>
+		 <div class="title-content">
+          <h3>Komodo</h3>
+          <hr>
+          <div class="intro">Indonesien</div>
+        </div>
+        <div class="card-info">Die starken Strömungen bringen eine gute Menge an pelagischen Arten. Weiße Spitzenhaien, Thunfische, Grauhaien ... und natürlich Mantas</div>
+      </div>
+      <div class="card indonesia lembongan">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Lembongan - Nusa Penida</h3>
+          <hr>
+          <div class="intro">Indonesien</div>
+        </div>
+        <div class="card-info">Manta Rochen können das ganze Jahr über gefunden werden. Von Oktober bis April hohe Chancen von Mola Mola. </div>
+		
+      </div>
+      <div class="card malaysia sipadan">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Sipadan - Mabul</h3>
+          <hr>
+          <div class="intro">Malaysia - Sabah</div>
+        </div>
+        <div class="card-info">Die spektakuläre Barracuda Point versagt nie. Zusammen mit vielen schwarzen Spitzeheien, weißen Spitzeheien, Schildkröten und Chancen von Hammerhaien</div>
+      </div>
+      <div class="card philippines malapascua">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Malapascua</h3>
+          <hr>
+          <div class="intro">Philippinen</div>
+        </div>
+        <div class="card-info">Malapascua hat die höchsten Chancen auf Begegnungen mit dem seltenen Thresher Hai.</div>
+      </div>
+      <div class="card thailand kohphihi">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Koh Phi Phi</h3>
+          <hr>
+          <div class="intro">Thailand</div>
+        </div>
+        <div class="card-info">Warmes, ruhiges Wasser, in dem unerfahrene Taucher eine Erfahrung machen können.</div>
+      </div>
+      <div class="card philippines apo">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Apo Island</h3>
+          <hr>
+          <div class="intro">Philippinen</div>
+        </div>
+        <div class="card-info">Die  Lage von Apo ermöglicht einige rühige Tauchgänge in seinem klaren Wasser und wunderschönen Unterwasserlandschaften</div>
+      </div>
+      <div class="card other grancanaria">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Gran Canaria</h3>
+          <hr>
+          <div class="intro">Spanien</div>
+        </div>
+        <div class="card-info">Die frischen atlantischen Gewässer bieten eine sehr lohnende Erfahrung für die Riff Taucher</div>
+      </div>
+      <div class="card indonesia bali">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Bali - Tulamben</h3>
+          <hr>
+          <div class="intro">Indonesien</div>
+        </div>
+        <div class="card-info">Haus zu einem der berühmtesten Wracks der Welt, dem USS Liberty Wrack. Erreichbar in einem einfachen Landestauchgang.</div>
+      </div>
+      <div class="card malaysia tenggol">
+		<div class="card-blur"></div>	  
+        <div class="title-content">
+          <h3>Tenggol Island</h3>
+          <hr>
+          <div class="intro">Malaysia</div>
+        </div>
+        <div class="card-info">Dieses noch zu entdeckende Juwel bietet das beste Tauchen in der Halbinsel Malaysia.</div>
+      </div>
+	   <div class="card other egypt">
+		<div class="card-blur"></div>	   
+        <div class="title-content">
+          <h3>Sharm el Sheikh</h3>
+          <hr>
+          <div class="intro">Egipt</div>
+        </div>
+        <div class="card-info">Die farbenfrohen Riffe zusammen mit der unglaublichen Artenvielfalt werden Sie nicht enttäuschen.</div>
+      </div>
+    </div><!--card-group-->
+    <div id="overview">
+<iframe src="https://www.google.com/maps/d/embed?mid=163iCG0TVfutc_acZJSyg5Z66TI2V1y5J&hl=en" width="640" height="480"></iframe>
+    </div>
+  </main>
+<footer>&copy; 2018 Ascension Pardo | Alle Rechte Vorbehalten |
+<a href="../datenschutzerklaerung.pdf">Datenschutz</a> | 
+<a href="../impressum.pdf">Impressum</a>
+</footer>
+</div>
+<div id="back-top"> <a href="#top">&uarr;</a> </div>
+</body>
+</html>

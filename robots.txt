@@ -1,0 +1,9 @@
+#Alles Zulassen
+User-agent:*
+Disallow:
+
+#Bestimmte Ordner/Seiten sperren:
+User-agent:*
+Disallow:/PADI_catalog.pdf
+Disallow:/Konzept/
+Disallow:/fonts/

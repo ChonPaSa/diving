@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<!--Metatags SEO-->
+<meta name="description" content="Tauchen lernen. Kurse für Anfänger und forgeschrittene. Entdeck meine favorite Tauchziele und lern über Meerestiere" />
+<meta name="keywords" content="Tauchen lernen, Meerestiere, Tauchen in Asien, Tauchen auf Philippinen, Tauchen in Thailand, Tauchen in Indonesien, Tauchen Malaysia, Schnuppertauchen, PADI" />
+<meta name="author" content="Ascension Pardo">
+<meta name="robots" content="index,follow">
+<title>Tauchlehrerin Choni</title>
+
+<!--FAVICON-->
+<link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+<link rel="manifest" href="../favicon/site.webmanifest">
+<link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">	
+
+<!--IE compatibility-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--[if lt IE 9]>
+    <script src="../js/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!--Viewport and Apple touch-->
+<meta name = "viewport" content = "width = device-width, initial-scale=1">
+<script>document.addEventListener("touchstart", function(){}, true);</script>
+  
+ <!-- Scripts and css-->  
+<script src="../js/jquery-3.3.1.min.js"></script>
+<link href="../css/mainstyle.css" rel="stylesheet" type="text/css">
+<script>
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(window).scrollTop()>200){	
+				$("#back-top").fadeIn();	
+			}
+			else{	
+				$("#back-top").fadeOut();		
+			};
+		});
+		
+		//slow scroll up
+		$("#back-top a").click(function(){
+			$("html,body").animate({scrollTop:0},1000);
+			return false;
+			
+		});
+	});	
+</script>
+</head>
+
+<body>
+<div class="wrapper"></div>
+<nav id="topmenu">
+  <h2><a href="#topmenu">&equiv;</a></h2>
+  <h2><a href="#close">&times;</a></h2>
+  <ul>
+    <li><a href="index.html">Startseite</a></li>
+       <li><a href="education.html">Tauchkurse</a>
+      <ul>
+        <li><a href="education.html#try">Schnupper<wbr>tauchen</a></li>
+        <li><a href="education.html#cert">Tauchschein</a></li>
+        <li><a href="education.html#continue">Weitere Kurse</a></li>
+      </ul>
+    </li>
+    <li><a href="destinations.html?location=everything">Tauchziele</a>
+      <ul>
+        <li><a href="destinations.html?location=indonesia">Indonesien</a></li>
+        <li><a href="destinations.html?location=thailand">Thailand</a></li>
+        <li><a href="destinations.html?location=malaysia">Malaysia</a></li>
+        <li><a href="destinations.html?location=philippines">Philippinen</a></li>
+        <li><a href="destinations.html?location=other">Andere Ziele</a></li>
+      </ul>
+    </li>
+    <li><a href="life.html">Meerestiere</a>
+      <ul>
+        <li><a href="life.html#sec-coral">Korallen</a></li>
+        <li><a href="life.html#sec-nudi">Nacktkiemer</a></li>
+        <li><a href="life.html#sec-inver">Wirbellose</a></li>
+        <li><a href="life.html#sec-fish">Fisch und mehr</a></li>
+      </ul>
+    </li>
+    <li><a href="about.html">Über mich</a>
+    </li>
+  </ul>
+</nav>
+	<div class="flags">
+	  <a href="../en/about.html"><img class="flag" src="../img/gb.png" alt="English"></a>
+		<a href="../sp/about.html"><img class="flag" src="../img/es.png" alt="Spanish"></a>
+		<a href="../de/about.html" class="not-active"><img class="flag" src="../img/de.png" alt="German"></a>
+	</div>
+<div class="content clearfix">
+  <header>
+    <div>
+      <h1>Über mich</h1>
+    </div>
+  </header>
+  <aside id="bio">
+    <h2>Wer bin ich?</h2>
+    <img src="../img/About_PC144454.jpg" alt="My picture">
+	<p> Hallo! Ich bin Choni, Tauchlehrerin und Informatikerin. Das Meer ist meine Leidenschaft und ich würde gerne mit dir meine Erfahrung teilen. </p>
+    <p> Seit meinem ersten Atemzug unter Wasser in den kalten und dunklen Seen von Berlin 2007 wusste ich, dass ich nie aufhören werde zu tauchen. </p>
+    <p> In 2014 habe ich in Kambodscha meine Ausbildung zum Divemaster gemacht und 2016 meinen Lehrstatus bekommen. </p>
+    <p> Während alle dieser Jahren habe ich an vielen verschiedenen Orten auf der Welt getaucht und habe viele wundervolle Begegnungen mit vielen Meereslebewesen hinter mir. </p>
+  </aside>
+  <main>
+      <form id="contact" action="../js/APmailer.php" method="post">
+        <h2>Kontakt</h2>
+		  <h4>Freue mich von Dir zu hören</h4>
+		  <label for="name">Name: </label>
+          <input placeholder="Dein Name" type="text" id="name" tabindex="1" required autofocus>
+		  <label for="email">Email: </label>          
+		  <input placeholder="Deine Email Addresse" type="email" id="email" tabindex="2" required>
+		  <label for="phone">Telefonnummer: </label>          
+		  <input placeholder="Deine Telefonnnummer" type="tel" id="phone" tabindex="3">
+		  <label for="subject">Betreff: </label>          
+		  <input placeholder="Worüber geht es?" id="subject" type="text" tabindex="4">
+		  <label for="message">Nachricht: </label>
+		  <textarea placeholder="Deine Nachricht hier schreiben...." id="message" tabindex="5" required></textarea>
+          <button name="submit" type="submit" id="contact-submit">Senden</button>
+      </form>
+    <article>
+	<div class="references">
+      <h2>Referenzen</h2>
+		  <a href="https://www.tripadvisor.com.au/ShowUserReviews-g303908-d1793950-r475999633-P_P_Aquanauts_Scuba-Ko_Phi_Phi_Don_Krabi_Province.html"><img class="myRefs" src="../img/trip1.jpg" alt="Review from tripAdvisor"></a>
+		  <a href="https://www.tripadvisor.com.au/ShowUserReviews-g303908-d1793950-r501331226-P_P_Aquanauts_Scuba-Ko_Phi_Phi_Don_Krabi_Province.html"><img class="myRefs" src="../img/trip2.jpg" alt="Review from tripAdvisor"></a>
+		  <a href="https://www.tripadvisor.com.au/ShowUserReviews-g303908-d1793950-r481979933-P_P_Aquanauts_Scuba-Ko_Phi_Phi_Don_Krabi_Province.html"><img class="myRefs" src="../img/trip3.jpg" alt="Review from tripAdvisor"></a>
+		  <a href="https://www.tripadvisor.com.au/ShowUserReviews-g303908-d1793950-r496695332-P_P_Aquanauts_Scuba-Ko_Phi_Phi_Don_Krabi_Province.html"><img class="myRefs" src="../img/trip4.jpg" alt="Review from tripAdvisor"></a>
+		  <a href="https://www.tripadvisor.com.au/ShowUserReviews-g303908-d1793950-r548779724-P_P_Aquanauts_Scuba-Ko_Phi_Phi_Don_Krabi_Province.html"><img class="myRefs" src="../img/trip5.jpg" alt="Review from tripAdvisor"></a>
+      <script>
+		var ind = 0;
+		carousel2();
+		function carousel2() {
+			var j;
+			var y = document.getElementsByClassName("myRefs");
+			for (j = 0; j < y.length; j++) {
+			   y[j].style.display = "none";  
+			}
+			ind++;
+			if (ind > y.length) {ind = 1}    
+			y[ind-1].style.display = "block";  
+			setTimeout(carousel2, 5000); // Change image every 5 seconds
+		}
+</script> 
+		</div>
+    </article>	
+    <article>
+      <h2>Ehemalige Studenten</h2>
+	  <p></p>
+      <div> 
+	  <img class="mySlides" src="../img/students_GOPR0796.jpg" alt="Former students"> 
+	  <img class="mySlides" src="../img/students_cambodia.jpg" alt="Former students"> 
+	  <img class="mySlides" src="../img/students_DSCN3356.jpg" alt="Former students"> 
+	  <img class="mySlides" src="../img/students_resort.jpg" alt="Former students"> 
+	  <img class="mySlides" src="../img/students_IMG_0563.jpg" alt="Former students">
+	  <img class="mySlides" src="../img/Students_malaysia.jpg" alt="Former students"> 
+	  <img class="mySlides" src="../img/students_Monad_Shoal.jpg" alt="Former students">  
+	  <img class="mySlides" src="../img/students_IMG_0564.jpg" alt="Former students"> 
+	  </div>
+      <script>
+		var myIndex = 0;
+		carousel();
+
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			for (i = 0; i < x.length; i++) {
+			   x[i].style.display = "none";  
+			}
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 2000); // Change image every 2 seconds
+		}
+</script> 
+    </article>
+  </main>
+<footer>&copy; 2018 Ascension Pardo | Alle Rechte Vorbehalten |
+<a href="../datenschutzerklaerung.pdf">Datenschutz</a> | 
+<a href="../impressum.pdf">Impressum</a>
+</footer>
+</div>
+<div id="back-top"> <a href="#top">&uarr;</a> </div>
+</body>
+</html>
